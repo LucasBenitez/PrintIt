@@ -1,0 +1,1 @@
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `phone`, `pedidos`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, 'tomas', 'tomas@printit.com.ar', '2020-11-23 16:26:50', 'tomascapo123', '11111111111', NULL, 'admin', NULL, NULL, NULL);

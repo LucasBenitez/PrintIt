@@ -8,26 +8,23 @@
                 <p>Brindamos el asesoramiento indicado para resolver y
                 hacer realidad todas las necesidades gráficas de nuestros clientes. 
                 Atendemos al público, al gremio gráfico y a empresas y grandes corporaciones.</p>
-                <p><a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#"
-                        role="button">Contactenos</a></p>
+                <a class="btn btn-primary btn-lg my-2" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" role="button">Contactenos</a>
             </div>
         </div>
         <div class="container">
             <div class="row">
-         @foreach ($products as $item)
-               
-                   <div class="col card px-2 pt-3 m-2">
-                       <h2>{{ $item->nombre }}</h2>
-                       <img src="{{ $item->nombre }}'" alt="" >
-                       <p>{{ $item->descripcion }} </p>
-                       <h2 class="text-center mb-2 font-weight-bold">${{ $item->precio }}</h2>
-                       <p><a class="btn btn-danger float-right" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#"
-                               role="button">Comprar</a></p>
-                   </div>    
-               
-         
-         @endforeach
-         </div>
+                @foreach ($products as $item)
+                    
+                        <div class="col card px-2 pt-3 m-2">
+                            <h2>{{ $item->nombre }}</h2>
+                            <img src="{{ asset('images/'.$item->imagen) }}" class="img-fluid" alt="" >
+                            <p>{{ $item->descripcion }} </p>
+                            <h2 class="text-center mb-2 font-weight-bold">${{ $item->precio }}</h2>
+                            <p><a class="btn btn-danger float-right" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" role="button">Comprar</a></p>
+                        </div>    
+                
+                @endforeach
+            </div>
          </div>
     </div>
 @endsection
