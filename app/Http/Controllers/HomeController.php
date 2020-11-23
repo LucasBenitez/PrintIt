@@ -25,8 +25,6 @@ class HomeController extends Controller
     public function index()
     {
         $products = DB::select('SELECT * FROM products');
-        
-        //return view('products' , compact('products'));
         return view('homeUsuario', compact('products'));
     }
    
